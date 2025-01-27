@@ -1,0 +1,22 @@
+{
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "text": "##  Món ăn từ trứng, thịt gà, cơm, hành lá, rau muống\n\nDưới đây là các món ăn có thể chế biến từ nguyên liệu bạn cung cấp, chia làm 2 trường hợp: có đủ gia vị và không đủ gia vị.  Tôi sẽ tập trung vào những món dễ tìm kiếm hướng dẫn trên YouTube.\n\n**Trường hợp 1: Có đủ gia vị (muối, tiêu, mì chính, dầu ăn, nước mắm, đường...)**\n\n\n**1. Cơm chiên trứng thịt gà:**\n\n* **Nguyên liệu:** 2 chén cơm nguội, 100g thịt gà xé nhỏ, 2 quả trứng, 1/2 củ hành lá thái nhỏ, dầu ăn, muối, tiêu, mì chính.\n* **Cách làm:**\n    1. Cho dầu ăn vào chảo, phi thơm hành lá.\n    2. Cho thịt gà vào xào săn.\n    3. Đập trứng vào, dùng đũa khuấy nhẹ cho trứng hơi chín.\n    4. Cho cơm vào, dùng đũa đảo đều cho cơm tơi.\n    5. Nêm muối, tiêu, mì chính vừa ăn.\n    6. Xào thêm 2-3 phút cho cơm nóng và khô ráo.\n    7. Trình bày và thưởng thức.\n\n\n**2. Canh rau muống thịt gà:**\n\n* **Nguyên liệu:** 100g thịt gà thái nhỏ, 200g rau muống, 1 củ hành lá thái nhỏ, nước dùng (nước lọc hoặc nước ninh gà), muối, tiêu, mì chính, dầu ăn.\n* **Cách làm:**\n    1. Cho dầu ăn vào nồi, phi thơm hành lá.\n    2. Cho thịt gà vào xào sơ qua.\n    3. Đổ nước dùng vào, đun sôi.\n    4. Cho rau muống vào, đun đến khi rau muống chín mềm.\n    5. Nêm muối, tiêu, mì chính vừa ăn.\n    6. Tắt bếp, múc canh ra tô và thưởng thức.\n\n\n**3. Trứng rán thịt gà:**\n\n* **Nguyên liệu:** 2 quả trứng, 50g thịt gà bằm nhỏ, 1/4 củ hành lá thái nhỏ, dầu ăn, muối, tiêu, mì chính.\n* **Cách làm:**\n    1. Trộn đều trứng, thịt gà bằm, hành lá, muối, tiêu, mì chính.\n    2. Cho dầu ăn vào chảo, đun nóng.\n    3. Đổ hỗn hợp trứng vào chảo, rán vàng 2 mặt.\n    4. Cắt thành miếng vừa ăn và thưởng thức.\n\n\n**Trường hợp 2: Thiếu gia vị (Chỉ có dầu ăn, có thể mượn thêm nước mắm nếu cần)**\n\n**1. Cơm rang trứng thịt gà (phiên bản đơn giản):**\n\n* **Nguyên liệu:** 2 chén cơm nguội, 100g thịt gà xé nhỏ, 2 quả trứng, 1/2 củ hành lá thái nhỏ, dầu ăn.\n* **Cách làm:**  Giống như cơm chiên trứng thịt gà ở trường hợp 1 nhưng bỏ qua bước nêm gia vị.  Bạn có thể dùng nước mắm nếu có để tăng hương vị.\n\n\n**2. Canh rau muống thịt gà (phiên bản đơn giản):**\n\n* **Nguyên liệu:** 100g thịt gà thái nhỏ, 200g rau muống, 1 củ hành lá thái nhỏ, nước lọc, dầu ăn.\n* **Cách làm:**  Giống như canh rau muống thịt gà ở trường hợp 1 nhưng bỏ qua bước nêm gia vị.  Nước dùng chỉ dùng nước lọc. Bạn có thể nếm thử và thêm chút nước mắm nếu có để tăng hương vị.\n\n\n**3. Trứng rán hành lá:**\n\n* **Nguyên liệu:** 2 quả trứng, 1/2 củ hành lá thái nhỏ, dầu ăn.\n* **Cách làm:**  Trộn đều trứng và hành lá.  Cho dầu ăn vào chảo, đun nóng. Đổ hỗn hợp trứng vào chảo, rán vàng 2 mặt.\n\nLưu ý:  Món ăn ở trường hợp 2 sẽ nhạt hơn so với trường hợp 1.  Nếu có thể, hãy cố gắng tìm kiếm thêm gia vị để món ăn ngon hơn.  Các món ăn trên đều rất dễ tìm kiếm hướng dẫn chi tiết trên YouTube bằng cách tìm kiếm tên món ăn.\n"
+                    }
+                ],
+                "role": "model"
+            },
+            "finishReason": "STOP",
+            "avgLogprobs": -0.13070635673327324
+        }
+    ],
+    "usageMetadata": {
+        "promptTokenCount": 111,
+        "candidatesTokenCount": 975,
+        "totalTokenCount": 1086
+    },
+    "modelVersion": "gemini-1.5-flash"
+}
