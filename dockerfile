@@ -8,6 +8,6 @@ RUN apk add --update --no-cache python3 py3-pip && \
     pip3 install --break-system-packages --no-cache requests 
 
 RUN rm -r /var/www/html/*
-COPY . /var/www/html
+COPY ssgProject/ /var/www/html
 RUN chown -R nobody:nobody /var/www/html
 USER nobody
