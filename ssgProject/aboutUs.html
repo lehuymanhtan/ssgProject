@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Let We Cook Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        /* Header Section */
+        .header {
+            text-align: center;
+            background: linear-gradient(90deg, #ff6600, #ff3366);
+            color: white;
+            padding: 60px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 5px solid #ffffff;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: 300;
+            color: #ffddcc;
+        }
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .team-member {
+            display: inline-block;
+            margin: 20px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 100%;
+            max-width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #ff6600;
+        }
+        .team-member h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 15px 0 10px;
+        }
+        .team-member a {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ff6600, #ff3366);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .team-member a:hover {
+            background: linear-gradient(90deg, #ff884d, #ff4d94);
+            transform: scale(1.1);
+        }
+        /* Footer Section */
+        .footer {
+            text-align: center;
+            background-color: #333;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        .footer p {
+            margin: 0;
+            font-weight: 400;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-member {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="./img/logo.png" alt="Logo">
+        <h1>About Us</h1>
+        <h2>Welcome to the Let We Cook Team!</h2>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <p>
+            <strong>Let We Cook Team</strong> là một nhóm cung cấp cách sinh tồn bằng các nguyên liệu thức ăn sẵn có.
+        </p>
+        <div class="team-member">
+            <img src="./img/logo.png" alt="Meal Mind">
+            <h3>Meal Mind</h3>
+            <a href="0869057695" target="_blank">Phone Numbers</a>
+            <a href="https://www.facebook.com/profile.php?id=61572853933530" target="_blank">Facebook</a>
+            <a href="mailto:mealmindssg104@gmail.com">Email</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 Let We Cook Team. All rights reserved.</p>
+    </div>
+</body>
+</html>
