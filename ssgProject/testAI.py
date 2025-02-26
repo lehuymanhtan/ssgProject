@@ -93,7 +93,7 @@ headers = {
 }
 
 response = requests.post(
-    'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAY8GyI8thdkvwuYMa32ycyVkOPKwtRH4U',
+    'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-thinking-exp-01-21:generateContent?key=AIzaSyAY8GyI8thdkvwuYMa32ycyVkOPKwtRH4U',
     json=json_data,
     headers=headers
 )
