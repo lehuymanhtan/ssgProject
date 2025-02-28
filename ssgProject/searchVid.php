@@ -11,7 +11,7 @@ $userFolder = $_SESSION['user_code'];
 $sessionPath = $basePath . '/' . $userFolder;
 if (!is_dir($sessionPath)) {
     mkdir($sessionPath, 0755, true); 
-    touch($sessionPath . '/foodVideo.txt'); 
+    touch($sessionPath . '/foodOnYoutube.txt'); 
 }
 
 session_save_path($sessionPath);
@@ -22,7 +22,7 @@ if (isset($_POST["food"])) {
 
     $output = shell_exec("python3 search.py $food");
 
-    $foodFilePath = $sessionPath . "/foodVideo.txt";
+    $foodFilePath = $sessionPath . "/foodOnYoutube.txt";
     $myfile = fopen($foodFilePath, "w") or die("Unable to open file!");
     fwrite($myfile, $output);
     fclose($myfile);

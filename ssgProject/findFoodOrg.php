@@ -1,16 +1,12 @@
 <?php
 session_start();
 
-// Đường dẫn cơ bản
-$basePath = __DIR__;
-
-// Kiểm tra session
+// Check user session
 if (!isset($_SESSION['user_code']) || empty($_SESSION['user_code'])) {
     echo "User session is invalid. Please login again.";
     exit;
 }
 
-// Lấy giá trị từ session
 $userCode = $_SESSION['user_code'];
 $food = $_SESSION[$userCode] ?? null;
 
@@ -19,17 +15,16 @@ if (empty($food)) {
     exit;
 }
 
-// Xử lý script Python và đọc file kết quả
+// Python execution and file read
 try {
-    $pythonPath = "/usr/bin/python3"; // Đường dẫn Python
+    $pythonPath = "/usr/bin/python3";
     $testAIScript = escapeshellcmd("$pythonPath testAI.py");
     $filterScript = escapeshellcmd("$pythonPath filter.py");
 
-    // Thực thi script Python
     shell_exec("$testAIScript " . escapeshellarg($food));
     shell_exec($filterScript);
+    shell_exec("python3 search.py");
 
-    // Đọc file kết quả
     $filePath = "./answerByAI1.txt";
     if (!file_exists($filePath)) {
         throw new Exception("Result file not found.");
@@ -39,34 +34,49 @@ try {
     if ($content === false) {
         throw new Exception("Cannot read content from result file.");
     }
+
+    // Read video links
+    $videoFilePath = "./foodVidLink.txt";
+    $videoSections = [];
+    if (file_exists($videoFilePath)) {
+        $videoContent = file_get_contents($videoFilePath);
+        $sections = preg_split('/\n(?=🔹)/', $videoContent);
+        foreach ($sections as $section) {
+            preg_match('/🔹 (.+):/', $section, $titleMatch);
+            if (!empty($titleMatch[1])) {
+                preg_match_all('/https:\/\/www\.youtube\.com\S+/', $section, $matches);
+                $videoSections[$titleMatch[1]] = $matches[0] ?? [];
+            }
+        }
+    }
 } catch (Exception $e) {
     $content = "An error occurred: " . htmlspecialchars($e->getMessage());
 }
 
-// Xuất giao diện HTML
+// HTML Output
 echo <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Result</title>
+    <title>Meal Mind - AI Result</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #eef2f3, #d9e4f5);
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: #333;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
             padding: 30px;
             background-color: white;
             border-radius: 15px;
@@ -79,18 +89,15 @@ echo <<<HTML
             to { opacity: 1; transform: translateY(0); }
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #4a90e2;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-size: 2.2em;
+            color: #ff6f61;
         }
         p {
             font-size: 1.1em;
             color: #666;
-            margin-bottom: 20px;
         }
         pre {
-            background-color: #f8f9fa;
+            background-color: #fff4e3;
             padding: 20px;
             border-radius: 10px;
             box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -101,53 +108,55 @@ echo <<<HTML
             color: #444;
             text-align: left;
         }
-        .btn {
-            display: inline-block;
+        .video-container {
             margin-top: 20px;
-            padding: 12px 30px;
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            border-radius: 30px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            text-align: left;
         }
-        .btn:hover {
-            background: linear-gradient(135deg, #4ade80, #38bdf8);
-            transform: scale(1.1);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-            color: #2575fc;
-        }
-        .footer {
+        .video-container h2 {
+            font-size: 1.5em;
+            color: #ff6f61;
             margin-top: 20px;
-            font-size: 0.9em;
-            color: #888;
         }
-        .footer span {
-            font-weight: bold;
+        .video-container iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="icon">📄</div>
-        <h1>Your Result</h1>
-        <p>This is the output generated by our calculation based on your input:</p>
+        <h1>Your AI-Generated Recipe</h1>
+        <p>Based on your input, here’s what we found:</p>
         <pre>
 HTML;
 
-// Hiển thị nội dung từ file
 echo htmlspecialchars($content);
 
 echo <<<HTML
         </pre>
-        <a href="../../index.html" class="btn">Go Back</a>
-        <div class="footer">&copy; 2025 <span>Nice Try Team</span>. Powered by our team.</div>
+        <div class="video-container">
+HTML;
+
+// Display YouTube videos grouped by dish
+foreach ($videoSections as $dish => $videoLinks) {
+    echo "<h2>$dish</h2>";
+    echo "<p>Dưới đây là video hướng dẫn cách làm:</p>";
+    foreach ($videoLinks as $videoLink) {
+        preg_match('/v=([a-zA-Z0-9_-]+)/', $videoLink, $videoId);
+        if (!empty($videoId[1])) {
+            echo '<iframe src="https://www.youtube.com/embed/' . htmlspecialchars($videoId[1]) . '" allowfullscreen></iframe>';
+        }
+    }
+}
+
+echo <<<HTML
+        </div>
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <div class="footer">&copy; 2025 <span>Meal Mind</span>. Powered by AI.</div>
     </div>
 </body>
 </html>

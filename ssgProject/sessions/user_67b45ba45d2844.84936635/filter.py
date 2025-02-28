@@ -12,7 +12,7 @@ with open('answerByAI1.txt', 'w', encoding='utf-8') as new_file:
 with open("answerByAI1.txt", "r", encoding="utf-8") as file:
     text = file.read().strip()
 
-pattern = r"\%([a-zA-Z0-9\sàáạảãăắặâầấậẩẫbcdéèẻẽẹêềếệểễghiíìỉĩịjklmnoóòỏõọôồốộổỗơờớởợỡpqrstúùủụũưừứựửữvxyz]+)\%"
+pattern = r"\%([a-zA-Z0-9\sàáạảãâầấậẩẫbcdéèẻẽêềếệểễghiíìỉĩîìịỉĩjklmnóòỏõôồốộổỗơờớởỡơpqrstúùủũưừứựửữvxyz]+)\%"
 
 matches = re.findall(pattern, text)
 

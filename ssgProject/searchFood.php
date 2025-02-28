@@ -23,7 +23,6 @@ if (!is_dir($sessionPath)) {
 session_save_path($sessionPath);
 
 
-
 if (!file_exists("$sessionPath/testAI.py")) {
     shell_exec("cp ./testAI.py $sessionPath/testAI.py");
 }
@@ -34,6 +33,10 @@ if (!file_exists("$sessionPath/filter.py")) {
 if (!file_exists("$sessionPath/findFood.php")) {
     shell_exec("cp ./findFoodOrg.php $sessionPath/findFood.php");
 }
+if (!file_exists("$sessionPath/search.py")) {
+    shell_exec("cp ./search.py $sessionPath/search.py");
+}
+
 
 header("Location: ./sessions/" . $_SESSION['user_code'] . "/findFood.php");
 exit();

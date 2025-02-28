@@ -1,0 +1,22 @@
+{
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "text": "**Có đủ gia vị:**\n\n* Cơm rang trứng thịt gà:  Xào thịt gà, cho cơm vào rang, đánh trứng đổ vào, cuối cùng cho hành lá.\n* Cơm chiên trứng thịt gà rau muống: Xào thịt gà, rau muống, cho cơm vào rang, đánh trứng đổ vào, cuối cùng cho hành lá.\n* Trứng rán thịt gà rau muống cơm:  rán trứng, xào thịt gà và rau muống, ăn kèm cơm.\n\n\n**Không đủ gia vị:**\n\nNguyên liệu không đủ để cho ra món ăn phù hợp\n"
+                    }
+                ],
+                "role": "model"
+            },
+            "finishReason": "STOP",
+            "avgLogprobs": -0.12260527727080554
+        }
+    ],
+    "usageMetadata": {
+        "promptTokenCount": 142,
+        "candidatesTokenCount": 123,
+        "totalTokenCount": 265
+    },
+    "modelVersion": "gemini-1.5-flash"
+}
