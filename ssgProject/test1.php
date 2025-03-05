@@ -95,7 +95,7 @@
         <p>Muốn chơi minigame để săn thưởng không?</p>
         <pre>
 <h3>Hãy vào about us và truy cập ngay fanpage facebook của let we cook</h3>
-<h3>Đăng kí ngay minigame do let we cook để ẵm ngay giải thưởng nàooo</h3>
+<h3>Đăng kí ngay minigame do let we cook tổ chức để ẵm ngay giải thưởng nàooo</h3>
 
         </pre>
         
