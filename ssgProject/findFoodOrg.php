@@ -62,6 +62,7 @@ echo <<<HTML
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Mind - AI Result</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -96,17 +97,16 @@ echo <<<HTML
             font-size: 1.1em;
             color: #666;
         }
-        pre {
+        .response {
             background-color: #fff4e3;
             padding: 20px;
             border-radius: 10px;
             box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.05);
             overflow-x: auto;
-            white-space: pre-wrap;
             font-size: 1em;
             line-height: 1.6;
             color: #444;
-            text-align: left;
+            text-align: initial;
         }
         .video-container {
             margin-top: 20px;
@@ -131,14 +131,16 @@ echo <<<HTML
     <div class="container">
         <h1>Your AI-Generated Recipe</h1>
         <p>Based on your input, here’s what we found:</p>
-        <pre>
+        <div class="response">
+            <md-block>
 HTML;
 
 echo htmlspecialchars($content);
 
 echo <<<HTML
-        </pre>
-        <div class="video-container">
+            </md-block>
+        </div>
+    <div class="video-container">
 HTML;
 
 // Display YouTube videos grouped by dish
