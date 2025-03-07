@@ -1,0 +1,34 @@
+{
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "text": "let we cook\n\nChào bạn, món %Gỏi cuốn tôm thịt% là một lựa chọn tuyệt vời. Tuy nhiên, vì bạn bị dị ứng với tôm, chúng ta sẽ thay thế tôm bằng một nguyên liệu khác nhé. Dưới đây là công thức %Gỏi cuốn thịt heo và trứng% thay thế, vẫn đảm bảo ngon miệng và đầy đủ dinh dưỡng:\n\n**Nguyên liệu:**\n\n*   **Thịt heo:** 300g (chọn thịt ba chỉ hoặc thịt nạc vai có chút mỡ để cuốn không bị khô), rửa sạch\n*   **Trứng gà:** 2 quả\n*   **Bánh tráng cuốn gỏi:** 1 gói (chọn loại bánh tráng mỏng, dai)\n*   **Bún tươi:** 300g\n*   **Rau sống:** Xà lách, rau thơm (húng quế, bạc hà, tía tô...), giá đỗ, dưa chuột, cà rốt (tổng khoảng 300g), rửa sạch, để ráo\n*   **Gia vị luộc thịt:** Muối, hạt nêm, hành tím, sả\n*   **Nước mắm chấm:**\n    *   Nước mắm ngon: 3 muỗng canh\n    *   Đường: 2 muỗng canh\n    *   Nước cốt chanh: 1 muỗng canh\n    *   Tỏi: 1 tép, băm nhỏ\n    *   Ớt: 1/2 quả, băm nhỏ (tùy chọn)\n\n**Cách thực hiện:**\n\n1.  **Luộc thịt:**\n\n    *   Cho thịt heo vào nồi, thêm nước ngập thịt. Thêm 1/2 muỗng cà phê muối, 1/2 muỗng cà phê hạt nêm, 1 củ hành tím đập dập và 1 nhánh sả đập dập vào nồi.\n    *   Đun sôi, hớt bọt rồi hạ nhỏ lửa, luộc thịt đến khi chín mềm (khoảng 20-25 phút).\n    *   Vớt thịt ra, để nguội bớt rồi thái lát mỏng vừa ăn.\n2.  **Tráng trứng:**\n\n    *   Đánh tan trứng gà với một chút muối và tiêu.\n    *   Đun nóng chảo với một chút dầu ăn, đổ trứng vào tráng mỏng thành lớp trứng tráng.\n    *   Để trứng nguội bớt rồi thái sợi dài.\n3.  **Chuẩn bị rau:**\n\n    *   Xà lách, rau thơm rửa sạch, để ráo.\n    *   Giá đỗ rửa sạch, trụng sơ qua nước sôi (tùy chọn).\n    *   Dưa chuột, cà rốt rửa sạch, gọt vỏ (nếu thích) rồi thái sợi dài.\n4.  **Pha nước mắm chấm:**\n\n    *   Cho nước mắm, đường, nước cốt chanh vào bát, khuấy đều cho đường tan.\n    *   Thêm tỏi và ớt băm vào, khuấy đều.\n    *   Nếm thử và điều chỉnh cho vừa khẩu vị.\n5.  **Cuốn gỏi cuốn:**\n\n    *   Nhúng bánh tráng vào nước ấm cho mềm.\n    *   Trải bánh tráng ra đĩa hoặc mâm.\n    *   Xếp lần lượt bún, thịt heo, trứng tráng, rau xà lách, rau thơm, giá đỗ, dưa chuột, cà rốt lên bánh tráng.\n    *   Cuốn chặt tay lại.\n6.  **Thưởng thức:**\n\n    *   Gỏi cuốn ngon nhất khi ăn ngay sau khi cuốn.\n    *   Chấm gỏi cuốn với nước mắm đã pha.\n\n**Lời khuyên:**\n\n*   **Thay đổi nguyên liệu:** Bạn có thể thay thế thịt heo bằng thịt gà luộc hoặc chả lụa nếu thích.\n*   **Làm nước chấm khác:** Ngoài nước mắm, bạn có thể làm nước tương đậu phộng hoặc mắm nêm để chấm gỏi cuốn.\n*   **Biến tấu gỏi cuốn chay:** Thay thịt heo bằng đậu hũ chiên hoặc nấm các loại.\n\nChúc bạn thành công và có món gỏi cuốn ngon miệng!\n"
+                    }
+                ],
+                "role": "model"
+            },
+            "finishReason": "STOP",
+            "avgLogprobs": -0.14309581470909624
+        }
+    ],
+    "usageMetadata": {
+        "promptTokenCount": 1306,
+        "candidatesTokenCount": 908,
+        "totalTokenCount": 2214,
+        "promptTokensDetails": [
+            {
+                "modality": "TEXT",
+                "tokenCount": 1306
+            }
+        ],
+        "candidatesTokensDetails": [
+            {
+                "modality": "TEXT",
+                "tokenCount": 908
+            }
+        ]
+    },
+    "modelVersion": "gemini-2.0-flash"
+}
