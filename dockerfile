@@ -9,5 +9,7 @@ RUN apk add --update --no-cache python3 py3-pip && \
 
 RUN rm -r /var/www/html/*
 COPY ssgProject/ /var/www/html
-RUN chown -R nobody:nobody /var/www/html
+RUN chown -R nobody:nobody /var/www/html && \
+    pip3 install --break-system-packages --no-cache -r requirements.txt
+
 USER nobody
